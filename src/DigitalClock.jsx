@@ -22,6 +22,7 @@ export const DigitalClock = () => {
     let minutes = time.getMinutes();
     let seconds = time.getSeconds();
     let maridian = hours >=12? "PM":"AM";
+    hours=hours%12==0?12:hours%12;
 
     return (`${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)} ${padZero(maridian)}`);
   }
